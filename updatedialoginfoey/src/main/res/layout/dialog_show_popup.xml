@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/maindialogpopup"
+    android:background="#0b1b25">
+    <LinearLayout
+        android:id="@+id/firstlayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="top"
+        android:orientation="vertical">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        app:lottie_enableMergePathsForKitKatAndAbove="true"
+        android:foregroundGravity="top"
+        app:lottie_autoPlay="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/secondlayout"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/firstlayout"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:gravity="center"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/dialog_content_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:text="WElcome !"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dialog_content_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="15dp"
+                    android:textSize="18dp"
+                    android:fontFamily="monospace"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:text="In above layout native ad size will be big. If you need to reduce the size of native ad then give dp instead of wrap content in height. If you run the above code then live native ad will be displayed in your app."
+                    android:textAllCaps="true"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/secondlayout"
+            android:gravity="bottom|center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/dialog_error_buttons_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|bottom"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/notnow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:text="Not Now"
+                        android:textSize="8dp"
+                        android:background="@android:color/transparent"/>
+
+                    <Button
+                        android:id="@+id/yesnow"
+                        android:layout_weight="2"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/yesnow"
+                        android:textColor="#eee"
+                        android:text="Update Now" />
+                </LinearLayout>
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:gravity="bottom"
+    android:padding="10dp"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:id="@+id/iconyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="bottom"
+        android:background="@drawable/yesssss"
+        android:contentDescription="@string/app_name" />
+</LinearLayout>
+</RelativeLayout>

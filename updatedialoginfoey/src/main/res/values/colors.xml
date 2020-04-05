@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // dialog stuff
+    <color name="welcome">#69aa56</color>
+    <color name="morning">#3490dc</color>
+    <color name="afternoon">#285d9b</color>
+    <color name="evening">#9b9b9b</color>
+    <color name="night">#0b1b25</color>
+
+</resources>
